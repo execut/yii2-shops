@@ -7,6 +7,7 @@ use yii\base\Application;
 
 class Common extends Bootstrap
 {
+    protected $isBootstrapI18n = true;
     public function getDefaultDepends()
     {
         return [
@@ -22,18 +23,6 @@ class Common extends Bootstrap
     {
         parent::bootstrap($app);
         $this->initNavigation($app);
-        $this->registerTranslations($app);
-    }
-
-    public function registerTranslations($app) {
-        $app->i18n->translations['execut/shops'] = [
-            'class' => 'yii\i18n\PhpMessageSource',
-            'sourceLanguage' => 'en-US',
-            'basePath' => '@vendor/execut/shops/messages',
-            'fileMap' => [
-                'execut/shops' => 'shops.php',
-            ],
-        ];
     }
 
     /**
