@@ -1,0 +1,26 @@
+.shop-page {
+  margin-top: 40px;
+}
+.shop-page img {
+  border: 5px solid #9BCF64;
+  border-radius: 5px;
+}
+.shop-page .shop-info-ph {
+  font-size: 14px;
+}
+.shop-page .shop-info-ph .phone {
+  display: block;
+  margin-top: 30px;
+  font-size: 30px;
+  color: #53AF2C;
+}
+.shop-page .shop-info-ph .phone span {
+  font-size: 18px;
+}
+.shop-page .shop-info-ph .phone span em {
+  font-style: normal;
+  color: #4F4F4F;
+}
+.shop-page .shop-logos .sprite-icon {
+  margin: 10px;
+}

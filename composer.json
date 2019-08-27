@@ -1,0 +1,31 @@
+{
+  "name": "execut/yii2-shops",
+  "description": "Yii2 module for shops managing with CRUD",
+  "keywords": ["yii2 shops"],
+  "homepage": "https://github.com/execut/yii2-shops",
+  "type": "library",
+  "license": "Apache-2.0",
+  "support": {
+    "issues": "https://github.com/execut/yii2-shops/issues?state=open",
+    "wiki": "https://github.com/execut/yii2-shops/wiki",
+    "source": "https://github.com/execut/yii2-shops"
+  },
+  "authors": [
+    {
+      "name": "eXeCUT"
+    }
+  ],
+  "require": {
+    "yiisoft/yii2": "@dev",
+    "execut/yii2-base": "@dev",
+    "execut/yii2-crud": "@dev",
+    "execut/yii2-crud-fields": "@dev",
+    "execut/yii2-dependencies": "@dev",
+    "execut/yii2-migration": "@dev"
+  },
+  "autoload": {
+    "psr-4": {
+      "execut\\shops\\": ""
+    }
+  }
+}

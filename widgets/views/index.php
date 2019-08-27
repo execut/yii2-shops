@@ -1,0 +1,2 @@
+<div id="map" class="map-wr"> </div>
+<div id="shops_json" openedBaloon="<?php echo $openedBaloon ?>" coords="<?php echo \yii\helpers\Json::encode($coords) ?>"><?= \yii\helpers\Json::encode($shops); ?></div>
