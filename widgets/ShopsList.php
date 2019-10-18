@@ -33,9 +33,12 @@ class ShopsList extends Widget
                         <div class="shop-item-logos">';
             echo '</div>
                         <a href="' . $url . '">' . $shop->address . '</a>
-                        <span class="shop-item-mode">Режим работы: ' . $shop->work_time . '</span>
-                        Тел.: +7 (812) <span class="shop-item-phone">' . $shop->phone_1 . '</span>
-                    </div>
+                        <span class="shop-item-mode">Режим работы: ' . $shop->work_time . '</span>';
+            if (\yii::$app->getModule('shops')->isShowPhones) {
+                echo 'Тел.: +7 (812) <span class="shop-item-phone">' . $shop->phone_1 . '</span>';
+            }
+
+            echo '</div>
                 </div>
             </div>';
         }

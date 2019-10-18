@@ -12,6 +12,7 @@ use execut\shops\models\Shop;
 class Module extends \yii\base\Module implements Plugin
 {
     public $adminRole = '@';
+    public $isShowPhones = true;
     public function behaviors()
     {
         return [

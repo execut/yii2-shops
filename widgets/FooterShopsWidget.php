@@ -16,7 +16,10 @@ class FooterShopsWidget extends \execut\yii\jui\Widget
             echo '<li class="footer-address-item">';
             echo '<div class="sprite-icon sprite-icon-logo-icon"></div>';
             echo Html::a($shop->address, $url);
-            echo '<br><span class="footer-address-phone">Тел.: (812) ' . $shop->phone_1 . '</span>';
+            if (\yii::$app->getModule('shops')->isShowPhones) {
+                echo '<br><span class="footer-address-phone">Тел.: (812) ' . $shop->phone_1 . '</span>';
+            }
+
             echo '</li>';
         }
 

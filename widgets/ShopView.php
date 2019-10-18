@@ -34,25 +34,13 @@ class ShopView extends Widget
             echo '</a>';
         }
 
-//        $this->widget('application.widgets.ImageGalleryWidget', array(
-//            'images' => $shop->image_gallery,
-//            'width' => 201, 'height' => 165,
-//        ));
         echo '</div>
         <div class="col-md-6 shop-info-ph">
             Режим работы:<br>';
         echo $shop->work_time;
-        echo '<span class="phone"><span><em>Тел.:</em> +7 (812)</span> ' . $shop->phone_1 . '</span>';
-//        $vsMarks = \common\modules\cms\models\base\CmsShopsVsCarsMarks::find()->where(['cms_shop_id' => $shop->id])->all();
-//        $logos = CarsMarks::getLogos();
-//        echo '<div class="shop-logos">';
-//        foreach ($vsMarks as $vsMark) {
-//            $laximoId = strtolower($vsMark->carsMark->name);
-//            if (isset($logos[$laximoId])) {
-//                echo '<div class="sprite-icon sprite-icon-' . $logos[$laximoId] . '-sm"></div>';
-//            }
-//        }
-//        echo '</div>
+        if (\yii::$app->getModule('shops')->isShowPhones) {
+            echo '<span class="phone"><span><em>Тел.:</em> +7 (812)</span> ' . $shop->phone_1 . '</span>';
+        }
         echo '</div>
         </div>';
         echo OnceWidget::widget([

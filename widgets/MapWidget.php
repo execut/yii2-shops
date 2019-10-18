@@ -26,16 +26,18 @@ class MapWidget extends Widget
                 $shops_arr[$i]['hintContent'] = $shop->name;
                 $count_info = 0;
                 $contBody = '';
-                if (!empty($shop->phone_1) || !empty($shop->phone_2)) {
-                    $contBody = 'Тел.: ';
-                    if (!empty($shop->phone_1)) {
-                        $contBody .= $shop->phone_1;
-                        $count_info++;
-                    }
-                    if (!empty($shop->phone_2)) {
-                        if ($count_info > 0) $contBody .= ', ';
-                        $contBody .= $shop->phone_2;
-                        $count_info++;
+                if (\yii::$app->getModule('shops')->isShowPhones) {
+                    if (!empty($shop->phone_1) || !empty($shop->phone_2)) {
+                        $contBody = 'Тел.: ';
+                        if (!empty($shop->phone_1)) {
+                            $contBody .= $shop->phone_1;
+                            $count_info++;
+                        }
+                        if (!empty($shop->phone_2)) {
+                            if ($count_info > 0) $contBody .= ', ';
+                            $contBody .= $shop->phone_2;
+                            $count_info++;
+                        }
                     }
                 }
                 if (!empty($shop->work_time)) {
