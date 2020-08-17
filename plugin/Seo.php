@@ -9,7 +9,8 @@ class Seo implements \execut\shops\Plugin
     {
         return [
             'seo' => [
-                'class' => \execut\seo\crudFields\Fields::class
+                'class' => \execut\seo\crudFields\Fields::class,
+                'isHasNoIndex' => false,
             ],
         ];
     }
